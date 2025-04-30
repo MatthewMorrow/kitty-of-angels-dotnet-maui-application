@@ -1,0 +1,34 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35825.156
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KittyOfAngels", "KittyOfAngels.csproj", "{A7CB0A0F-B028-48C0-AB71-9B0A37DC1472}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|ARM64 = Debug|ARM64
+		Release|Any CPU = Release|Any CPU
+		Release|ARM64 = Release|ARM64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A7CB0A0F-B028-48C0-AB71-9B0A37DC1472}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7CB0A0F-B028-48C0-AB71-9B0A37DC1472}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7CB0A0F-B028-48C0-AB71-9B0A37DC1472}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{A7CB0A0F-B028-48C0-AB71-9B0A37DC1472}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{A7CB0A0F-B028-48C0-AB71-9B0A37DC1472}.Debug|ARM64.Build.0 = Debug|ARM64
+		{A7CB0A0F-B028-48C0-AB71-9B0A37DC1472}.Debug|ARM64.Deploy.0 = Debug|ARM64
+		{A7CB0A0F-B028-48C0-AB71-9B0A37DC1472}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7CB0A0F-B028-48C0-AB71-9B0A37DC1472}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7CB0A0F-B028-48C0-AB71-9B0A37DC1472}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{A7CB0A0F-B028-48C0-AB71-9B0A37DC1472}.Release|ARM64.ActiveCfg = Release|ARM64
+		{A7CB0A0F-B028-48C0-AB71-9B0A37DC1472}.Release|ARM64.Build.0 = Release|ARM64
+		{A7CB0A0F-B028-48C0-AB71-9B0A37DC1472}.Release|ARM64.Deploy.0 = Release|ARM64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {03D2E912-9A1C-4AA2-A506-4D3D7933BAEE}
+	EndGlobalSection
+EndGlobal

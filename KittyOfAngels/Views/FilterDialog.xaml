@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--Version 1.0-->
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:KittyOfAngels.Views"
+             x:Class="KittyOfAngels.Views.FilterDialog"
+             x:DataType="views:FilterDialog"
+             BackgroundColor="#80000000"
+             Shell.NavBarIsVisible="False"
+             Shell.BackgroundColor="{StaticResource Primary}">
+    <ContentPage.Resources>
+        <Style TargetType="Picker">
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="TitleColor" Value="White"/>
+            <Setter Property="FontSize" Value="14" />
+        </Style>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <Grid VerticalOptions="Center" HorizontalOptions="Center">
+            <Border Background="White" 
+                   StrokeShape="RoundRectangle 12"
+                   Stroke="{StaticResource Gray200}"
+                   StrokeThickness="1"
+                   WidthRequest="300"
+                   Margin="20">
+                <StackLayout Padding="20">
+                    <Label Text="Filter Cats" 
+                           FontSize="20" 
+                           FontAttributes="Bold" 
+                           TextColor="Black" 
+                           HorizontalOptions="Center"
+                           Margin="0,0,0,15"/>
+
+                    <Label Text="Breed" FontAttributes="Bold" Margin="0,10,0,5" TextColor="Black"/>
+                    <Border Padding="10,0" 
+                           Background="#4ea094"
+                           Stroke="{StaticResource Black}"
+                           StrokeShape="RoundRectangle 8"
+                           HeightRequest="44">
+                        <Grid VerticalOptions="Center">
+                            <Picker x:Name="BreedPicker" 
+                                    Title="Select breed"
+                                    FontAttributes="Bold"
+                                    SelectedItem="{Binding SelectedBreed}"
+                                    TextColor="White"
+                                    TitleColor= "White"
+                                    BackgroundColor="Transparent"
+                                    VerticalOptions="Center"
+                                    HorizontalOptions="Fill"/>
+                        </Grid>
+                    </Border>
+
+                    <Label Text="Age" FontAttributes="Bold" Margin="0,10,0,5" TextColor="Black"/>
+                    <Border Padding="10,0" 
+                           Background="#4ea094"
+                           Stroke="{StaticResource Black}"
+                           StrokeShape="RoundRectangle 8"
+                           HeightRequest="44">
+                        <Grid VerticalOptions="Center">
+                            <Picker x:Name="AgePicker" 
+                                    Title="Select age range"
+                                    FontAttributes="Bold"
+                                    SelectedItem="{Binding Age}"
+                                    TextColor="White"
+                                    TitleColor="White"
+                                    VerticalOptions="Center"
+                                    HorizontalOptions="Fill"/>
+                        </Grid>
+                    </Border>
+
+                    <Label Text="Sex" FontAttributes="Bold" Margin="0,10,0,5" TextColor="Black"/>
+                    <Grid ColumnDefinitions="*,*">
+                        <Grid Grid.Column="0">
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnFemaleTapped"/>
+                            </Grid.GestureRecognizers>
+
+                            <HorizontalStackLayout Spacing="8" VerticalOptions="Center">
+                                <Grid WidthRequest="20" HeightRequest="20">
+                                    <Ellipse Fill="White" 
+                                           Stroke="Gray"
+                                           StrokeThickness="2"
+                                           WidthRequest="20" 
+                                           HeightRequest="20"
+                                           HorizontalOptions="Center"
+                                           VerticalOptions="Center"/>
+
+                                    <Ellipse Fill="{StaticResource Primary}"
+                                           WidthRequest="12" 
+                                           HeightRequest="12" 
+                                           HorizontalOptions="Center"
+                                           VerticalOptions="Center"
+                                           IsVisible="{Binding IsFemale}"/>
+                                </Grid>
+
+                                <Label Text="Female" 
+                                       TextColor="#000000"
+                                       FontSize="14"/>
+                            </HorizontalStackLayout>
+                        </Grid>
+
+                        <Grid Grid.Column="1">
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnMaleTapped"/>
+                            </Grid.GestureRecognizers>
+
+                            <HorizontalStackLayout Spacing="8" VerticalOptions="Center">
+                                <Grid WidthRequest="20" HeightRequest="20">
+                                    <Ellipse Fill="White" 
+                                           Stroke="Gray"
+                                           StrokeThickness="2"
+                                           WidthRequest="20" 
+                                           HeightRequest="20"
+                                           HorizontalOptions="Center"
+                                           VerticalOptions="Center"/>
+
+                                    <Ellipse Fill="{StaticResource Primary}"
+                                           WidthRequest="12" 
+                                           HeightRequest="12" 
+                                           HorizontalOptions="Center"
+                                           VerticalOptions="Center"
+                                           IsVisible="{Binding IsMale}"/>
+                                </Grid>
+                                <Label Text="Male" 
+                                       TextColor="#000000"
+                                       FontSize="14"/>
+                            </HorizontalStackLayout>
+                        </Grid>
+                    </Grid>
+
+                    <Grid Margin="0,20,0,0" 
+                          HorizontalOptions="Center">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="120" />
+                            <ColumnDefinition Width="10" />
+                            <ColumnDefinition Width="120" />
+                        </Grid.ColumnDefinitions>
+
+                        <Button Grid.Column="0"
+                                Text="Reset" 
+                                Command="{Binding ResetCommand}"
+                                BackgroundColor="Transparent"
+                                TextColor="{StaticResource Primary}"
+                                BorderColor="{StaticResource Primary}"
+                                BorderWidth="1"
+                                HeightRequest="40"
+                                CornerRadius="20"/>
+
+                        <Button Grid.Column="2"
+                                Text="Apply" 
+                                Command="{Binding ApplyCommand}"
+                                BackgroundColor="{StaticResource Primary}"
+                                TextColor="{StaticResource White}"
+                                HeightRequest="40"
+                                CornerRadius="20"/>
+                    </Grid>
+                </StackLayout>
+            </Border>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

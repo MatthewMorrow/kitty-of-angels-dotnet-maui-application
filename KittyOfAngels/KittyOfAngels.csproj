@@ -1,0 +1,126 @@
+﻿<!--Version 1.0-->
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFrameworks>net9.0-android35</TargetFrameworks>
+		<OutputType>Exe</OutputType>
+		<RootNamespace>KittyOfAngels</RootNamespace>
+		<UseMaui>true</UseMaui>
+		<SingleProject>true</SingleProject>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+		<Nullable>enable</Nullable>
+		<ApplicationTitle>KittyOfAngels</ApplicationTitle>
+		<ApplicationId>org.kittyofangels.app</ApplicationId>
+		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
+		<ApplicationVersion>1</ApplicationVersion>
+		<WindowsPackageType>None</WindowsPackageType>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion>
+		<MauiEnableXamlCBindingWithSourceCompilation>false</MauiEnableXamlCBindingWithSourceCompilation>
+		<Platforms>AnyCPU;ARM64</Platforms>
+	</PropertyGroup>
+	<PropertyGroup>
+		<MauiEnableXamlCBindingWithSourceCompilation>true</MauiEnableXamlCBindingWithSourceCompilation>
+		<NoWarn>$(NoWarn);XA0101</NoWarn>
+	</PropertyGroup>
+	<PropertyGroup>
+		<EnableDefaultCompileItems>true</EnableDefaultCompileItems>
+		<EnableDefaultItems>true</EnableDefaultItems>
+		<GenerateXamlG>false</GenerateXamlG>
+		<AndroidSigningKeyStore>Keystore\kittyofangels.keystore</AndroidSigningKeyStore>
+		<PlatformTarget>ARM64</PlatformTarget>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net9.0-android35|AnyCPU'">
+	  <AndroidKeyStore>True</AndroidKeyStore>
+	  <AndroidSigningStorePass>Qz3xn92hv8@Samadhi!12</AndroidSigningStorePass>
+	  <AndroidSigningKeyAlias>kittyofangels</AndroidSigningKeyAlias>
+	  <AndroidSigningKeyPass>Qz3xn92hv8@Samadhi!12</AndroidSigningKeyPass>
+	  <ApplicationId>org.kittyofangels.app</ApplicationId>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net9.0-android35|ARM64'">
+	  <AndroidKeyStore>True</AndroidKeyStore>
+	  <AndroidSigningStorePass>Qz3xn92hv8@Samadhi!12</AndroidSigningStorePass>
+	  <AndroidSigningKeyAlias>kittyofangels</AndroidSigningKeyAlias>
+	  <AndroidSigningKeyPass>Qz3xn92hv8@Samadhi!12</AndroidSigningKeyPass>
+	  <ApplicationId>org.kittyofangels.app</ApplicationId>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net9.0-android35|AnyCPU'">
+	  <AndroidKeyStore>True</AndroidKeyStore>
+	  <AndroidSigningStorePass>Qz3xn92hv8@Samadhi!12</AndroidSigningStorePass>
+	  <AndroidSigningKeyAlias>kittyofangels</AndroidSigningKeyAlias>
+	  <AndroidSigningKeyPass>Qz3xn92hv8@Samadhi!12</AndroidSigningKeyPass>
+	  <ApplicationId>org.kittyofangels.app</ApplicationId>
+	  <AndroidPackageFormat>apk</AndroidPackageFormat>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net9.0-android35|ARM64'">
+	  <AndroidKeyStore>True</AndroidKeyStore>
+	  <AndroidSigningStorePass>Qz3xn92hv8@Samadhi!12</AndroidSigningStorePass>
+	  <AndroidSigningKeyAlias>kittyofangels</AndroidSigningKeyAlias>
+	  <AndroidSigningKeyPass>Qz3xn92hv8@Samadhi!12</AndroidSigningKeyPass>
+	  <ApplicationId>org.kittyofangels.app</ApplicationId>
+	  <AndroidPackageFormat>apk</AndroidPackageFormat>
+	</PropertyGroup>
+	<ItemGroup>
+		<MauiSplashScreen Include="Resources\Splash\koalogo.svg" Color="#4ea094" Resize="False" />
+		<MauiIcon Include="Resources\AppIcon\appicon.png" Color="#FFFFFF" />
+		<MauiFont Include="Resources\Fonts\*" />
+		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
+	</ItemGroup>
+	<ItemGroup>
+		<AndroidResource Remove="Platforms\Android\Resources\**" />
+		<AndroidResource Remove="UnitTest\**" />
+		<Compile Remove="Platforms\Android\Resources\**" />
+		<Compile Remove="UnitTest\**" />
+		<EmbeddedResource Remove="Platforms\Android\Resources\**" />
+		<EmbeddedResource Remove="UnitTest\**" />
+		<MauiCss Remove="Platforms\Android\Resources\**" />
+		<MauiCss Remove="UnitTest\**" />
+		<MauiXaml Remove="Platforms\Android\Resources\**" />
+		<MauiXaml Remove="UnitTest\**" />
+		<None Remove="Platforms\Android\Resources\**" />
+		<None Remove="UnitTest\**" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="CommunityToolkit.Maui" Version="9.0.0" />
+		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
+		<PackageReference Include="Microsoft.AppCenter" Version="5.0.7" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.WebView" Version="9.0.0" />
+		<PackageReference Include="Microsoft.Data.Sqlite" Version="9.0.3" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.3" />
+		<PackageReference Include="Microsoft.Extensions.Http" Version="9.0.3" />
+		<PackageReference Include="Microsoft.Extensions.Logging" Version="9.0.3" />
+		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.0" />
+		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.13.0" />
+		<PackageReference Include="System.Text.Json" Version="9.0.3" />
+		<PackageReference Include="xunit" Version="2.9.3" />
+	</ItemGroup>
+	<ItemGroup>
+		<Compile Update="AppShell.xaml.cs">
+			<DependentUpon>AppShell.xaml</DependentUpon>
+		</Compile>
+		<Compile Update="Views\ExportPage.xaml.cs">
+			<DependentUpon>ExportPage.xaml</DependentUpon>
+		</Compile>
+	</ItemGroup>
+	<ItemGroup>
+		<MauiXaml Update="AppShell.xaml">
+			<Generator>MSBuild:Compile</Generator>
+			<SubType>Designer</SubType>
+		</MauiXaml>
+		<MauiXaml Update="Resources\Colors\Colors.xaml">
+			<Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+		<MauiXaml Update="Views\CatProfilePage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+		<MauiXaml Update="Views\ExportPage.xaml">
+			<Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+		<MauiXaml Update="Views\FilterDialog.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+		<MauiXaml Update="Views\GalleryPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+	</ItemGroup>
+</Project>

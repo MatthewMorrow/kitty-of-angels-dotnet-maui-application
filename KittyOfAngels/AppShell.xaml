@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--Version 1.0-->
+<Shell
+    x:Class="KittyOfAngels.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:KittyOfAngels"
+    xmlns:views="clr-namespace:KittyOfAngels.Views"
+    x:DataType="local:AppShell"
+    FlyoutBackgroundColor="White"
+    BackgroundColor="#4FBBB2"
+    FlyoutBehavior="Flyout"
+    FlyoutHeight="350"
+    Title="Kitty of Angels">
+
+    <Shell.FlyoutContent>
+        <Grid BackgroundColor="White" RowDefinitions="Auto,*,Auto">
+            <Grid Grid.Row="0" BackgroundColor="#4FBBB2" HeightRequest="75">
+                <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                    <Label Text="Kitty of Angels" 
+                           TextColor="White"
+                           FontSize="32"
+                           FontAttributes="Bold"
+                           FontFamily="Forque"
+                           HorizontalOptions="Center" 
+                           Margin="0,0,0,0" />
+                </StackLayout>
+            </Grid>
+
+            <StackLayout Grid.Row="1" Spacing="20" Margin="0,20,0,0">
+                <StackLayout.Resources>
+                    <Style TargetType="Label">
+                        <Setter Property="FontFamily" Value="Forque" />
+                        <Setter Property="FontSize" Value="22" />
+                        <Setter Property="FontAttributes" Value="Bold" />
+                        <Setter Property="TextColor" Value="#4ea094" />
+                        <Setter Property="HorizontalOptions" Value="Start" />
+                        <Setter Property="Margin" Value="20,0,0,0" />
+                    </Style>
+                </StackLayout.Resources>
+
+                <Grid>
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding NavigateCommand}" 
+                                              CommandParameter="GalleryPage" />
+                    </Grid.GestureRecognizers>
+                    <Label Text="Available Cats" TextColor="Black"  />
+                </Grid>
+
+                <Grid>
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding NavigateCommand}" 
+                                              CommandParameter="ExportPage" />
+                    </Grid.GestureRecognizers>
+                    <Label Text="Export" TextColor="Black"/>
+                </Grid>
+            </StackLayout>
+
+            <Grid Grid.Row="2" VerticalOptions="End" Margin="0,0,0,25">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Follow Us" 
+                           Padding="10"
+                           FontSize="18" 
+                           FontAttributes="Bold" 
+                           TextColor="Black"
+                           HorizontalOptions="Center" />
+
+                    <HorizontalStackLayout HorizontalOptions="Center" Spacing="25">
+                        <Button Text="f" 
+                                TextColor="White"
+                                FontSize="22"
+                                FontAttributes="Bold"
+                                WidthRequest="40"
+                                HeightRequest="40"
+                                CornerRadius="20"
+                                BackgroundColor="#1877F2"
+                                Padding="0"
+                                Clicked="OnFacebookClicked" />
+
+                        <Button Text="IG" 
+                                TextColor="White"
+                                FontSize="16"
+                                FontAttributes="Bold"
+                                WidthRequest="40"
+                                HeightRequest="40"
+                                CornerRadius="20"
+                                BackgroundColor="#E1306C"
+                                Padding="0"
+                                Clicked="OnInstagramClicked" />
+
+                        <Button Text="𝕏"
+                                TextColor="White"
+                                FontSize="18"
+                                FontAttributes="Bold"
+                                WidthRequest="40"
+                                HeightRequest="40"
+                                CornerRadius="20"
+                                BackgroundColor="Black"
+                                Padding="0"
+                                Clicked="OnXClicked" />
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+            </Grid>
+        </Grid>
+    </Shell.FlyoutContent>
+
+    <ShellContent Route="GalleryPage" 
+                  ContentTemplate="{DataTemplate views:GalleryPage}"
+                  FlyoutItemIsVisible="False" />
+
+    <ShellContent Route="ExportPage" 
+                  ContentTemplate="{DataTemplate views:ExportPage}" 
+                  FlyoutItemIsVisible="False" />
+</Shell>

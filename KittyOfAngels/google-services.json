@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "454509963287",
+    "project_id": "kitty-of-angels",
+    "storage_bucket": "kitty-of-angels.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:454509963287:android:2b01c29b5b7c3a677d1452",
+        "android_client_info": {
+          "package_name": "org.kittyofangels.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4P0XzWFZUAsZp7RE29eLZdOy7WQGqhbQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
