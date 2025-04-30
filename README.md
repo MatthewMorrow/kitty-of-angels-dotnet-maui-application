@@ -38,6 +38,12 @@ A .NET MAUI mobile application for browsing and managing adoptable cats from the
 - Responsive UI with proper loading and error states
 - See the README PDF for complete documentation
 
-## Note
+## Notes
 
 This repository is for code review and demonstration purposes only. The application requires a ShelterLuv API key which is not included in this repository for security reasons. The code cannot be run without a valid API key.
+
+## App Testing
+
+To request access to test the application, please visit the Firebase App Distribution page:
+
+![image](https://github.com/user-attachments/assets/4e7a86c9-93b4-4346-8817-6d6c1c10d232)
