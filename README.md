@@ -44,6 +44,6 @@ This repository is for code review and demonstration purposes only. The applicat
 
 ## App Testing
 
-To request access to test the application, please visit the Firebase App Distribution page:
+To request access to test the application, please visit the [Firebase App Distribution page](https://appdistribution.firebase.google.com/pub/i/6b41574e0455883c):
 
 ![image](https://github.com/user-attachments/assets/4e7a86c9-93b4-4346-8817-6d6c1c10d232)
