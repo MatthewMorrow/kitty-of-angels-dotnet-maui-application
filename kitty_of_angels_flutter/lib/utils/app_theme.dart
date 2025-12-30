@@ -43,7 +43,7 @@ class AppTheme {
       drawerTheme: const DrawerThemeData(
         backgroundColor: backgroundColor,
       ),
-      cardTheme: CardTheme(
+      cardTheme: CardThemeData(
         elevation: 2,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(12),

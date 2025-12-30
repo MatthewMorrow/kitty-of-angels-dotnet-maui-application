@@ -96,7 +96,7 @@ class _FilterDialogState extends ConsumerState<FilterDialog> {
           ),
           const SizedBox(height: 8),
           DropdownButtonFormField<String?>(
-            value: _selectedBreed,
+            initialValue: _selectedBreed,
             decoration: const InputDecoration(
               hintText: 'Any breed',
             ),
